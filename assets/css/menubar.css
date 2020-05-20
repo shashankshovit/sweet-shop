@@ -53,7 +53,8 @@
 }
 .menu_bar .menu-inner .right {
 	display: flex;
-	margin-right: 50px;
+	margin-bottom: 10px;
+	margin-right: 10px;
 	text-align: right;
 }
 .menu_bar .menu-inner .right .sitenav {
@@ -85,10 +86,10 @@
 }
 .menu_bar .menu-inner .right .user-icons {
 	border-left: 1px solid black;
+	display: flex;
 	height: 25px;
-	padding-left: 20px;
+	padding-left: 10px;
 	position: relative;
-	top: -4px;
 }
 .menu_bar .menu-inner .right .user-icons img {
 	cursor: pointer;
@@ -121,14 +122,12 @@
 @media only screen and (max-width: 768px) {
 	.menu_bar .menu-inner .right .sitenav {
 		background: white;
-		border: 1px solid #ebebeb;
 		display: flex;
 		flex-direction: column;
 		padding: 5px;
 		position: absolute;
-		right: 135px;
+		right: 110px;
 		text-align: left;
-		top: 65px;
 		width: 100px;
 		z-index: 1;
 	}

@@ -2,11 +2,11 @@
     background: white;
     border-radius: 5px;
     display: none;
-    height: 420px;
+    /*height: 420px;*/
+    max-width: 750px;
     padding: 5px;
 	position: absolute;
     right: 0;
-    width: 750px;
     z-index: 100;
 }
 
@@ -97,7 +97,7 @@
     flex-direction: column;
 }
 .checkout .cost-breakup .left .cost-row {
-	font-size: 25px;
+	font-size: 24px;
 }
 .checkout .cost-breakup .title {}
 .checkout .cost-breakup .value {
@@ -109,4 +109,10 @@
     display: flex;
     height: 324px;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 480px) {
+    .checkout .cost-breakup {
+        flex-direction: column;
+    }
 }

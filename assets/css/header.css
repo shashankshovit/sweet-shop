@@ -4,7 +4,8 @@
 	height: 30px;
 }
 .header .inner {
-	padding: 5px 100px;
+    overflow: hidden;
+    padding: 5px 30px;
 }
 .header .inner .phone {
 	float: left;
