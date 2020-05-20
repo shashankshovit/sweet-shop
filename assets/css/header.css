@@ -1,0 +1,17 @@
+.header {
+	background: #5e3f3c;
+	color: #fff;
+	height: 30px;
+}
+.header .inner {
+	padding: 5px 100px;
+}
+.header .inner .phone {
+	float: left;
+}
+.header .inner .ques {
+	float: right;
+}
+.header .inner .ques span {
+	padding: 0 5px;
+}

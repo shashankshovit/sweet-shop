@@ -1,0 +1,18 @@
+.next-button {
+    align-items: center;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-weight: 900;
+    height: 40px;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 200px;
+}
+.next-button div {
+	font-size: 18px;
+}
+.next-button span {
+	top: -1px;
+}

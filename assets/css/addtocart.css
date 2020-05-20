@@ -1,0 +1,8 @@
+.add-to-cart {
+	background-color: orange;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	padding: 7px 10px 5px;
+	text-align: center;
+}

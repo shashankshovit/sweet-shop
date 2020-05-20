@@ -1,0 +1,182 @@
+.product-tile {
+	cursor: default;
+	display: flex;
+	overflow: hidden;
+	padding: 5px;
+	position: relative;
+	height: 300px;
+	width: 300px;
+	max-height: 300px;
+	max-width: 300px;
+}
+
+.product-tile:after {
+  animation: shine 5s ease-in-out  infinite;
+  animation-fill-mode: forwards;  
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.10) 0%,
+    rgba(255, 255, 255, 0.10) 70%,
+    rgba(255, 255, 255, 0.7) 90%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+@keyframes shine {
+  10% {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  100% {
+    opacity: 0;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+  }
+}
+
+.product-tile img {
+	margin: auto;
+	max-height: 280px;
+}
+.product-tile .details {
+	bottom: 0;
+	cursor: default;
+	position: absolute;
+	width: calc(100% - 10px);
+}
+.product-tile .details .name-holder {
+	font-weight: 900;
+	text-align: left;
+	/*padding-left: 18px;*/
+	display: flex;
+}
+.product-tile .details .name-holder .veg-non-veg {
+	background: white;
+	border: 1px solid green;
+	content: '';
+	display: block;
+	height: 16px;
+	width: 16px;
+}
+.product-tile .details .name-holder .veg-non-veg::after {
+	background: green;
+	border-radius: 50%;
+	content: '';
+	display: block;
+	height: 10px;
+	position: relative;
+	left: 2px;
+	top: 2px;
+	width: 10px;
+}
+.product-tile .details .name-holder .product-name {
+	margin-left: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.product-tile .details .ingredients {
+	color: gray;
+	font-size: 12px;
+	overflow: hidden;
+	text-align: left;
+	text-overflow: ellipsis;
+	width: 95%;
+	white-space: nowrap;
+}
+.product-tile .details .bottom-line {
+	display: flex;
+	font-size: 12px;
+	padding: 0 0 10px;
+	text-align: left;
+}
+.product-tile .details .bottom-line .weight-price {
+	background: whitesmoke;
+	border-radius: 5px;
+	float: left;
+	margin: auto auto auto 0;
+	padding: 5px;
+}
+.product-tile .details .bottom-line .weight-price .weight {
+	color: gray;
+	padding: 0 5px;
+}
+.product-tile .details .bottom-line .weight-price .price {
+	font-weight: 900;
+	padding: 0 5px;
+}
+.product-tile .details .bottom-line .add-to-cart {}
+.product-tile .preview {
+	background-color: rgba(0, 0, 0, 0.5);
+	bottom: 0px;
+	color: white;
+	display: none;
+	left: 16px;
+	position: absolute;
+	top: 0px;
+	width: calc(100% - 30px);
+}
+.product-tile:hover .preview {
+	display: block;
+}
+.product-tile .preview .title {
+	border-bottom: 1px solid white;
+	font-size: 20px;
+	margin: auto;
+	padding: 10px 0 20px;
+	text-transform: capitalize;
+	width: max-content;
+}
+.product-tile .preview .description {
+	font-size: 16px;
+	height: 180px;
+	padding: 20px;
+	text-align: left;
+}
+.product-tile .preview .add-to-cart {
+	background: transparent;
+	border: 1px solid white;
+	font-size: 18px;
+	width: 150px;
+	margin: auto;
+}
+.product-tile .quantity-wrap {
+    align-items: center;
+    background: white;
+    bottom: 0;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    left: 0;
+    margin: 0 5px;
+    position: absolute;
+    right: 0;
+}
+.product-tile .quantity-wrap .control {
+    background: orange;
+    color: white;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: 900;
+    height: inherit;
+    text-align: center;
+    width: 50px;
+}
+
+
+

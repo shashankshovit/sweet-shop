@@ -1,0 +1,112 @@
+.checkout {
+    background: white;
+    border-radius: 5px;
+    display: none;
+    height: 420px;
+    padding: 5px;
+	position: absolute;
+    right: 0;
+    width: 750px;
+    z-index: 100;
+}
+
+.checkout.visible {
+	display: block;
+}
+
+.checkout .ribbon {
+	display: flex;
+    height: 75px;
+    position: relative;
+    width: 100%;
+}
+
+.checkout .ribbon .stage-box {
+    align-items: center;
+    background-color: #656464;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 25%;
+}
+.checkout .ribbon .stage-box.active {
+	background-color: orange;
+}
+.checkout .ribbon .stage-box.active::after {
+    background-color: orange;
+    content: '';
+    display: block;
+    height: 36px;
+    position: absolute;
+    right: -18px;
+    transform: rotateZ(39deg) skew(15deg, 30deg);
+    width: 36px;
+    z-index: 1;
+}
+.checkout .ribbon .stage-box.active.last::after {
+	display: none;
+}
+.checkout .ribbon .stage-box .stage {
+    background-color: white;
+    border-radius: 50%;
+    bottom: 1px;
+    display: inline-block;
+    height: 35px;
+	left: -3px;
+    padding: 8px 0 0 13px;
+    position: relative;
+    width: 35px;
+
+}
+.checkout .ribbon .stage-box .title {
+    color: white;
+    font-weight: 900;
+    height: 22px;
+}
+.checkout .summary {
+    font-size: 20px;
+    padding: 15px 15px 0;
+}
+.checkout .cart-empty {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    height: 200px;
+    justify-content: center;
+    text-align: center;
+}
+.checkout .horizontal-navigator-container {
+	margin-top: 0;
+}
+.checkout .horizontal-navigator-container .products-wrapper {
+	height: 200px;
+}
+.checkout .horizontal-navigator-container .products-wrapper .product-tile {
+	width: 180px;
+	height: 180px;
+}
+.checkout .cost-breakup {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.checkout .cost-breakup .left {
+    display: flex;
+    flex-direction: column;
+}
+.checkout .cost-breakup .left .cost-row {
+	font-size: 25px;
+}
+.checkout .cost-breakup .title {}
+.checkout .cost-breakup .value {
+	color: orange;
+	margin-left: 25px;
+}
+.no-design {
+    align-items: end;
+    display: flex;
+    height: 324px;
+    justify-content: space-between;
+}

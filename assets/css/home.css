@@ -1,0 +1,36 @@
+.home-content ol.carousel-indicators {
+	bottom: -40px;
+}
+.home-content ol.carousel-indicators li {
+	border: 1px solid #c68103;
+}
+.home-content .carousel-indicators li.active {
+	background-color: orange;
+}
+
+.home-content .slider-container .item img {
+	height: 224px;
+	margin: auto;
+}
+.home-content .shop-menu {
+	margin-top: 40px;
+	text-align: center;
+}
+.home-content .shop-menu .menu-items-container {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-evenly;
+	margin: 0 auto 20px;
+}
+.home-content .shop-menu .more-wrapper {
+	text-align: center;
+}
+.home-content .shop-menu .more-wrapper span {
+	background: orange;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	padding: 10px 20px 5px;
+	text-transform: uppercase;
+}

@@ -1,0 +1,80 @@
+.detail-page {}
+.detail-page .detail-wrapper {
+	margin: auto;
+	padding: 40px 10px;
+	display: flex;
+	justify-content: space-evenly;
+}
+.detail-page .detail-wrapper .image-wrap {
+	height: 400px;
+	width: 400px;
+	overflow: hidden;
+	position: relative;
+	margin-right: 15px;
+}
+.detail-page .detail-wrapper .image-wrap img {
+	height: inherit;
+}
+.detail-page .detail {
+	margin-left: 15px;
+	font-size: 17px;
+	width: 400px;
+}
+.detail-page .detail .name-label {
+	font-size: 25px;
+	font-weight: 900;
+}
+.detail-page .detail .desc-label, .detail-page .detail .quantity-label {
+	margin-top: 20px;
+	font-weight: 900;
+}
+.detail-page .detail .description {
+	margin-top: 10px;
+	color: gray;
+}
+.detail-page .detail .quantity-dropdown-wrap {
+	margin-top: 10px;
+}
+.detail-page .detail .quantity-dropdown-wrap .weight-options {
+	width: 200px;
+	background-color: gainsboro;
+	border-radius: 5px;
+	padding: 15px 0 10px;
+}
+.detail-page .detail .quantity-dropdown-wrap .weight-options .dropdown-options {
+	left: -1px;
+}
+.detail-page .detail .offer-price {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.detail-page .detail .offer-price span {
+	padding: 10px;
+}
+.detail-page .detail .offer-price .price {
+	font-weight: 900;
+	font-size: 25px;
+}
+.detail-page .detail .offer-price .orig-price {
+	text-decoration: line-through;
+}
+.detail-page .detail .offer-price .offer {
+	color: orange;
+}
+.detail-page .detail .add-to-cart {
+	width: 200px;
+	height: 55px;
+	display: table-cell;
+	vertical-align: middle;
+
+}
+
+.detail-page .recommended {}
+
+@media only screen and (max-width: 850px) {
+	.detail-page .detail-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+}

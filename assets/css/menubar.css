@@ -1,0 +1,147 @@
+.menu_bar {
+	border-bottom: 1px solid #f2d2cf;
+	height: 100px;
+	z-index: 1;
+}
+.menu_bar .menu-inner {
+	align-items: flex-end;
+	display: flex;
+	height: inherit;
+	justify-content: space-between;
+	padding: 10px 0;
+	position: relative;
+}
+/*.menu_bar .menu-inner::before {
+    background-image: radial-gradient(circle at 30px -5px, transparent 20px, green 20px);
+    background-repeat: repeat;
+    background-size: 31px 60px;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+.menu_bar .menu-inner::after {
+    background-image: radial-gradient(circle at 30px 20px, green 20px, transparent 20px);
+    background-repeat: repeat;
+    background-size: 60px;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 15px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}*/
+.menu_bar .menu-inner .left {
+	display: flex;
+	margin-left: 10px;
+}
+.menu_bar .menu-inner .left .logo-wrap {
+	background-image: url('../../assets/images/icons/sweetshoplogo.png');
+	background-size: contain;
+	content: '';
+	cursor: pointer;
+	height: 80px;
+	width: 140px;
+}
+
+.menu_bar .menu-inner .left .location {
+	align-self: flex-end;
+}
+.menu_bar .menu-inner .right {
+	display: flex;
+	margin-right: 50px;
+	text-align: right;
+}
+.menu_bar .menu-inner .right .sitenav {
+	margin-right: 10px;
+}
+.menu_bar .menu-inner .right .sitenav span {
+	cursor: pointer;
+	padding: 0 10px;
+	transition: height 1s ease-in-out;
+}
+.menu_bar .menu-inner .right .sitenav span:hover {
+	color: orange;
+}
+.menu_bar .menu-inner .right .sitenav .mobile-menu {
+	display: none;
+	flex-direction: column;
+}
+.menu_bar .menu-inner .right .sitenav .mobile-menu span {
+	border-top: 2px solid black;
+	display: inline-block;
+	width: 20px;
+}
+.menu_bar .menu-inner .right .sitenav .mobile-menu .first {
+	height: 6px;
+}
+.menu_bar .menu-inner .right .sitenav .mobile-menu .second {
+    border-bottom: 2px solid black;
+    height: 8px;
+}
+.menu_bar .menu-inner .right .user-icons {
+	border-left: 1px solid black;
+	height: 25px;
+	padding-left: 20px;
+	position: relative;
+	top: -4px;
+}
+.menu_bar .menu-inner .right .user-icons img {
+	cursor: pointer;
+	height: 20px;
+	margin: 0 5px;
+	position: relative;
+	top: 1px;
+	width: 20px;
+}
+.menu_bar .menu-inner .right .user-icons .cart-count {
+	background: black;
+	border: 1px solid black;
+	border-radius: 50%;
+	color: white;
+	display: none;
+	font-size: 9px;
+	font-weight: 900;
+	height: 15px;
+	left: -13px;
+	padding: 2px 1px 0;
+	position: relative;
+	text-align: center;
+	top: -5px;
+	width: 15px;
+}
+.menu_bar .menu-inner .right .user-icons .cart-count.visible {
+	display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+	.menu_bar .menu-inner .right .sitenav {
+		background: white;
+		border: 1px solid #ebebeb;
+		display: flex;
+		flex-direction: column;
+		padding: 5px;
+		position: absolute;
+		right: 135px;
+		text-align: left;
+		top: 65px;
+		width: 100px;
+		z-index: 1;
+	}
+	.menu_bar .menu-inner .right .sitenav span {
+		height: 0;
+		overflow: hidden;
+	}
+	.menu_bar .menu-inner .right .sitenav span.menuvisible {
+		height: auto;
+	}
+	.menu_bar .menu-inner .right .sitenav .mobile-menu {
+		align-items: flex-end;
+		display: flex;
+		position: relative;
+	}
+}

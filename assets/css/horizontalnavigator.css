@@ -1,0 +1,50 @@
+.horizontal-navigator-container {
+	margin-top: 25px;
+	position: relative;
+}
+.horizontal-navigator-container .arrow {
+	background-color: #0000004f;
+	border: 1px solid #0000007d;
+	border-radius: 50%;
+	bottom: 0;
+	color: white;
+	cursor: pointer;
+	height: 32px;
+	margin: auto;
+	padding: 7px;
+	position: absolute;
+	top: 0;
+	width: 32px;
+	z-index: 1;
+}
+.horizontal-navigator-container .arrow:hover {
+	box-shadow: #000000 0 0 15px;
+}
+.horizontal-navigator-container .arrow.left {
+	left: 15px;
+}
+.horizontal-navigator-container .arrow.right {
+	right: 15px;
+}
+.horizontal-navigator-container .products-wrapper {
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+}
+.horizontal-navigator-container .row {
+	margin: auto;
+	position: absolute;
+	transition: left 0.6s ease-in-out;
+}
+.horizontal-navigator-container .row.visible {
+    display: flex;
+    justify-content: space-evenly;
+    left: 0;
+    right: 0;
+}
+.horizontal-navigator-container .row.beyond-left {
+	left: -2000px;
+}
+.horizontal-navigator-container .row.beyond-right {
+	left: 2000px;
+}
