@@ -2,7 +2,7 @@
 	cursor: default;
 	display: flex;
 	overflow: hidden;
-	padding: 5px;
+	padding: 5px 0 !important;
 	position: relative;
 	height: 300px;
 	width: 300px;
@@ -52,12 +52,15 @@
 .product-tile img {
 	margin: auto;
 	max-height: 280px;
+	width: 100%;
 }
 .product-tile .details {
-	bottom: 0;
-	cursor: default;
-	position: absolute;
-	width: calc(100% - 10px);
+    bottom: 0;
+    cursor: default;
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    padding: 0 5px;
 }
 .product-tile .details .name-holder {
 	font-weight: 900;
@@ -122,14 +125,13 @@
 }
 .product-tile .details .bottom-line .add-to-cart {}
 .product-tile .preview {
-	background-color: rgba(0, 0, 0, 0.5);
-	bottom: 0px;
-	color: white;
-	display: none;
-	left: 16px;
-	position: absolute;
-	top: 0px;
-	width: calc(100% - 30px);
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0px;
+    color: white;
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
 }
 .product-tile:hover .preview {
 	display: block;
