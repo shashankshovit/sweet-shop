@@ -20,9 +20,14 @@
 .menu-head .menu-head-orange {
 	color: orange;
 }
+.footer {
+    position: relative;
+    margin-top: 200px;
+}
 .sweet-shop-footer {
     border-top: 1px solid orange;
     text-align: center;
+
 }
 .content.sticky-menu {
     position: relative;
