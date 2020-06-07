@@ -5,8 +5,10 @@
     /*height: 420px;*/
     max-width: 750px;
     padding: 5px;
-	position: absolute;
+	position: fixed;
     right: 0;
+    top: 100px;
+    width: 100%;
     z-index: 100;
 }
 

@@ -24,6 +24,7 @@ class HorizontalNavigator extends Container {
 		let tileOptns = overrideTileOptions || {
 			preview: false,
 			details: true,
+			quantityController: false,
 			classes: 'recommend col-xs-3 col-sm-3 col-md-3 col-lg-3',
 		};
 

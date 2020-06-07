@@ -3,6 +3,22 @@ class MenuBar extends BaseHTML {
 		super();
 		this.html = html;
 		this.createMenuBar();
+
+		document.addEventListener('scroll', this.onScroll.bind(this));
+	}
+
+	onScroll(evt) {
+		this.topmostParent.throttle(this.toggleStickyMenuBar.bind(this), 500);
+	}
+
+	toggleStickyMenuBar() {
+		if(window.pageYOffset > this.html.offsetTop) {
+			this.html.classList.add('sticky');
+			this.topmostParent.content.html.classList.add('sticky-menu');
+		} else {
+			this.html.classList.remove('sticky');
+			this.topmostParent.content.html.classList.remove('sticky-menu');
+		}
 	}
 
 	createMenuBar() {

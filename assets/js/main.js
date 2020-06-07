@@ -24,5 +24,5 @@ let libFiles = [
 
 require(libFiles, function () {
 	// new SweetShop();
-	window.sweetShopObj = new SweetShop();
+	// window.sweetShopObj = new SweetShop();
 });

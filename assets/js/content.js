@@ -21,18 +21,7 @@ class Content extends BaseHTML {
 		this.add(this.contentTypes.home, false);
 		this.contentTypes.detail = new DetailPage('', menuItems);
 		this.add(this.contentTypes.detail, false);
-		// this.add(this.contentTypes.detail, true);
 	}
-
-	// renderContent(page, pageOptions={}) {
-	// 	page = page || this.page;
-	// 	if(!Object.keys(this.contentTypes).includes(page)) {
-	// 		console.error("Invalid content type: ", page);
-	// 		return;
-	// 	}
-	// 	debugger;
-	// 	this.add();
-	// }
 
 	renderContent(page, pageOptions={}) {
 		page = page || this.page;

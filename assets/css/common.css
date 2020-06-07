@@ -24,3 +24,7 @@
     border-top: 1px solid orange;
     text-align: center;
 }
+.content.sticky-menu {
+    position: relative;
+    top: 100px;
+}

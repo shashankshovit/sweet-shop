@@ -14,7 +14,9 @@ class ProductTile extends BaseHTML {
 		let classes = 'product-tile';
 		options.classes && (classes += ` ${options.classes}`)
 		this.html = new Container({className: classes}).render;
-		this.add(new Image({src: path}));
+		let imgWrapper = new Container({className: 'image-wrapper'});
+		imgWrapper.add(new Image({src: path}));
+		this.add(imgWrapper);
 		options.preview && this.showPreviewPane(path);
 		options.details && this.showDetailsSection(path);
 		options.quantityController && this.showQuantityController();
@@ -22,8 +24,13 @@ class ProductTile extends BaseHTML {
 		this.html.addEventListener('click', this.onProductClick.bind(this));
 	}
 
+	onTouchStart(evt) {
+		debugger;
+	}
+
 	onProductClick(evt) {
 		this.topmostParent.content.renderContent('detail', {path:this.path});
+		this.topmostParent.content.html.scrollIntoView();
 	}
 
 	get name() {

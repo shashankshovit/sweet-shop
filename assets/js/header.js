@@ -2,7 +2,6 @@ class Header extends BaseHTML {
 	constructor(html) {
 		super();
 		this.html = html;
-		window.header = this;
 	}
 
 	get render() {

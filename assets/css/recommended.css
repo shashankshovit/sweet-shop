@@ -18,6 +18,10 @@
 	background-color: white;
 	box-shadow: #727272 0px 0px 20px;
 }
+.recommended .product-tile .image-wrapper {
+    height: 50%;
+    overflow: hidden;
+}
 .recommended .product-tile img {
 	margin: 0 auto auto;
 	max-height: 280px;

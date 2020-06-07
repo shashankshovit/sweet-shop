@@ -1,7 +1,13 @@
 .menu_bar {
+	background-color: white;
 	border-bottom: 1px solid #f2d2cf;
 	height: 100px;
-	z-index: 1;
+	width: 100%;
+	z-index: 2;
+}
+.menu_bar.sticky {
+	position: fixed;
+	top: 0;
 }
 .menu_bar .menu-inner {
 	align-items: flex-end;
@@ -113,7 +119,11 @@
 	position: relative;
 	text-align: center;
 	top: -5px;
+	transition: transform 1s linear;
 	width: 15px;
+}
+.menu_bar .menu-inner .right .user-icons .cart-count.rotate {
+	transform: rotateY(360deg);
 }
 .menu_bar .menu-inner .right .user-icons .cart-count.visible {
 	display: inline-block;

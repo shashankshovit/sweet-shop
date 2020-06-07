@@ -3,6 +3,7 @@ class SweetShop extends BaseHTML {
 		super();
 		this.html = document.querySelector('body');
 		this.cart = {};
+		this.throttles = {};
 		this.header = new Header(this.getElement('.header'));
 		this.add(this.header, false);
 		this.menuBar = new MenuBar(this.getElement('.menu_bar'));
@@ -25,6 +26,15 @@ class SweetShop extends BaseHTML {
 		return Object.keys(this.cart).length ? Object.values(this.cart).reduce((a,b)=> (a+b)) : 0;
 	}
 
+	animateCartCounter() {
+		if(this.cartCounter.classList.contains('rotate')) {
+			this.cartCounter.classList.remove('rotate');
+		} else {
+			this.cartCounter.classList.add('rotate');
+		}
+		setTimeout(() => {this.cartCounter.innerHTML = this.cartCount}, 500);
+	}
+
 	increaseQuantity(product) {
 		if(this.cart[product]) {
 			this.cart[product]++;	
@@ -32,7 +42,7 @@ class SweetShop extends BaseHTML {
 			this.cart[product] = 1;
 		}
 		this.cartCounter.classList.add('visible');
-		this.cartCounter.innerHTML = this.cartCount;
+		this.animateCartCounter();
 	}
 
 	reduceQuantity(product) {
@@ -41,7 +51,7 @@ class SweetShop extends BaseHTML {
 		} else {
 			this.cart[product]--;
 		}
-		this.cartCounter.innerHTML = this.cartCount;
+		this.animateCartCounter();
 		if(this.cartCount == 0) {
 			this.cartCounter.classList.remove('visible');
 		}
@@ -67,6 +77,15 @@ class SweetShop extends BaseHTML {
 		this.add(this.checkout, false);
 		this.checkout.initialize();
 		this.enableBlocker();
+	}
+
+	throttle(func, time) {
+		if(!this.throttles[func.name]) {
+			this.throttles[func.name] = setTimeout(() => {
+				func();
+				this.throttles[func.name] = undefined;
+			}, time);
+		}
 	}
 
 	get banners() {
